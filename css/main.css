@@ -1,3 +1,8 @@
+/* ======================================
+
+            SITEWIDE STYLES
+
+====================================== */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 :root  {
@@ -8,6 +13,7 @@
     --color-white: #fff;
     --color-info-dark: #7d8da1;
     --color-info-light: #dce1eb;
+    --color-gray: #808080;
     --color-dark: #363949;
     --color-light: rgba(132, 139, 200, 0.18);
     --color-primary-variant: #111e88;
@@ -24,11 +30,11 @@
     --padding-1: 1.2rem;
 
     --box-shadow: 0 2rem 3rem var(--color-light);
+
+    --transition: all 300ms ease;
 }
 
-*,
-*::before,
-*::after {
+* {
     appearance: none;
     border: 0;
     box-sizing: border-box;
@@ -124,4 +130,102 @@ b {
 }
 .warning {
     color: var(--color-warning);
+}
+
+/* ======================================
+
+            ASIDE
+
+======================================*/
+aside {
+    height: 100%;
+}
+
+aside .top {
+    align-items: center;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.4rem;
+}
+
+aside .logo {
+    display: flex;
+    gap: 0.8rem;
+}
+
+aside .logo img{
+    height: 2rem;
+    width: 2rem;
+}
+
+aside .close {
+    display: none;
+}
+
+aside .sidebar {
+    display: flex;
+    flex-direction: column;
+    height: 86vh;
+    position: relative;
+    top: 3rem;
+}
+
+aside h3 {
+    font-weight: 500;
+}
+
+aside .sidebar a {
+    align-items: center;
+    color: var(--color-info-dark);
+    display: flex;
+    gap: 1rem;
+    height: 3.7rem;
+    margin-left: 2rem;
+    position: relative;
+    transition: var(--transition);
+}
+
+aside .sidebar a span {
+    font-size: 1.6rem;
+    transition: var(--transition);
+}
+
+aside .sidebar a:last-child {
+    bottom: 2rem;
+    position: absolute;
+    width:100%
+}
+
+aside .sidebar a.active {
+    background: var(--color-light);
+    color: var(--color-primary);
+    margin-left: 0;
+}
+aside .sidebar a.active:before {
+    background: var(--color-primary);
+    content: "";
+    height: 100%;
+    width: 6px;
+}
+
+aside .sidebar a.active span {
+    color: var(--color-primary);
+    margin-left: calc(1rem -3px);
+}
+
+aside .sidebar a:hover {
+    color: var(--color-primary);
+}
+
+aside .sidebar a:hover span {
+    margin-left: 1rem;
+}
+
+aside .sidebar .message-cout {
+    background: var(--color-danger);
+    border-radius: var(--border-radius-1);
+    color: var(--color-white);
+    font-size: 11px;
+    padding: 2px 10px;
 }
