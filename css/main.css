@@ -404,7 +404,6 @@ main .recent-orders a {
 }
 /* ======== TOP ======== */
 .right .top {
-    background: var(--color-gray);
     display: flex;
     gap: 2rem;
     justify-content: end;
