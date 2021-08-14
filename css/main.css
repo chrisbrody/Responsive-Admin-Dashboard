@@ -584,7 +584,7 @@ main .recent-orders a {
     }
 
     aside {
-        animation: showMenu 400ms ease forwards ;
+        animation: showMenu 400ms ease forwards;
         background: var(--color-white);
         box-shadow: 1rem 3rem 4rem var(--color-light);
         display: none;
@@ -592,6 +592,7 @@ main .recent-orders a {
         left: -100%;
         padding-right: var(--card-padding);
         position: fixed;
+        transition: var(--transition);
         width: 18rem;
         z-index: 3;
     }
